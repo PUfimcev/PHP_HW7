@@ -13,17 +13,15 @@ function verifyPass()
 
         if(!empty($_COOKIE['name_inval'])) setcookie('name_inval', $username, time()-10);
         if(!empty($_COOKIE['error'])) setcookie('error', 'Invalid username or password', time()-10);
-        setcookie('username', $username);
+        // setcookie('username', $username);
         return true;
         
     } else {
-        if(!empty($_COOKIE['username'])) setcookie('username', $username, time()-10);
+        // if(!empty($_COOKIE['username'])) setcookie('username', $username, time()-10);
         setcookie('name_inval', $username);
         setcookie('error', 'Invalid username or password');
         return false;
     }
-    
-    
     
 }
 
@@ -36,13 +34,5 @@ if(verifyPass()){
     
 };
 
-
-
-
 ?>
 
-
-
-
-
-<?php

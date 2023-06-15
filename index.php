@@ -2,9 +2,8 @@
 
 require_once  'sessions/session.php';
 
-if(!isset($_SESSION['username'])): header("Location: ./form.php");
+if(!$_SESSION): header("Location: ./form.php");
 
-print_r($_SESSION);
 else: ?>
 
 <!DOCTYPE html>
